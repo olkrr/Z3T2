@@ -1,0 +1,75 @@
+#włączenie mod_rewrite
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+  
+
+
+RewriteRule ^Klient/?$ ?controller=Klient&action=getAll [L]
+RewriteRule ^Klient/getAll/?$ index.php?controller=Klient&action=getAll [L]
+RewriteRule ^Klient/add/?$ index.php?controller=Klient&action=addform [L]
+RewriteRule ^Klient/insert/?$ index.php?controller=Klient&action=add [L]
+RewriteRule ^Klient/delete/(\d+)/?$ index.php?controller=Klient&action=delete&id=$1 [L]
+RewriteRule ^Klient/edit/(\d+)/?$ index.php?controller=Klient&action=editform&id=$1 [L]
+RewriteRule ^Klient/update/?$ index.php?controller=Klient&action=update [L]
+
+RewriteRule ^Naprawa/?$ ?controller=Naprawa&action=getAll [L]
+RewriteRule ^Naprawa/getAll/?$ index.php?controller=Naprawa&action=getAll [L]
+RewriteRule ^Naprawa/add/(\d+)/?$ index.php?controller=Naprawa&action=addform&id=$1 [L]
+RewriteRule ^Naprawa/insert/?$ index.php?controller=Naprawa&action=add [L]
+RewriteRule ^Naprawa/delete/(\d+)/?$ index.php?controller=Naprawa&action=delete&id=$1 [L]
+RewriteRule ^Naprawa/edit/(\d+)/?$ index.php?controller=Naprawa&action=editform&id=$1 [L]
+RewriteRule ^Naprawa/update/?$ index.php?controller=Naprawa&action=update [L]
+RewriteRule ^Naprawa/getNaprawyForKlient/(\d+)/?$ index.php?controller=Naprawa&action=getNaprawyForKlient&id=$1 [L]
+RewriteRule ^Naprawa/faktura/(\d+)/?$ index.php?controller=Naprawa&action=faktura&id=$1 [L]
+
+RewriteRule ^Osprzet/?$ ?controller=Osprzet&action=getAll [L]
+RewriteRule ^Osprzet/getAll/?$ index.php?controller=Osprzet&action=getAll [L]
+RewriteRule ^Osprzet/addform/?$ index.php?controller=Osprzet&action=addform [L]
+RewriteRule ^Osprzet/add/?$ index.php?controller=Osprzet&action=add [L]
+RewriteRule ^Osprzet/delete/(\d+)/?$ index.php?controller=Osprzet&action=delete&id=$1 [L]
+RewriteRule ^Osprzet/editform/(\d+)/?$ index.php?controller=Osprzet&action=editform&id=$1 [L]
+RewriteRule ^Osprzet/edit/(\d+)/?$ index.php?controller=Osprzet&action=edit&id=$1 [L]
+RewriteRule ^Osprzet/update/?$ index.php?controller=Osprzet&action=update [L]
+
+RewriteRule ^Opcja/?$ ?controller=Opcja&action=getAll [L]
+RewriteRule ^Opcja/getAll/?$ index.php?controller=Opcja&action=getAll [L]
+
+
+RewriteRule ^Producent/?$ ?controller=Producent&action=getAll [L]
+RewriteRule ^Producent/getAll/?$ index.php?controller=Producent&action=getAll [L]
+RewriteRule ^Producent/addform/?$ index.php?controller=Producent&action=addform [L]
+RewriteRule ^Producent/add/?$ index.php?controller=Producent&action=add [L]
+RewriteRule ^Producent/delete/(\d+)/?$ index.php?controller=Producent&action=delete&id=$1 [L]
+RewriteRule ^Producent/editform/(\d+)/?$ index.php?controller=Producent&action=editform&id=$1 [L]
+RewriteRule ^Producent/edit/(\d+)/?$ index.php?controller=Producent&action=edit&id=$1 [L]
+RewriteRule ^Producent/update/?$ index.php?controller=Producent&action=update [L]
+
+RewriteRule ^Status/?$ ?controller=Status&action=getAll [L]
+RewriteRule ^Status/getAll/?$ index.php?controller=Status&action=getAll [L]
+RewriteRule ^Status/addform/?$ index.php?controller=Status&action=addform [L]
+RewriteRule ^Status/add/?$ index.php?controller=Status&action=add [L]
+RewriteRule ^Status/delete/(\d+)/?$ index.php?controller=Status&action=delete&id=$1 [L]
+RewriteRule ^Status/editform/(\d+)/?$ index.php?controller=Status&action=editform&id=$1 [L]
+RewriteRule ^Status/edit/(\d+)/?$ index.php?controller=Status&action=edit&id=$1 [L]
+RewriteRule ^Status/update/?$ index.php?controller=Status&action=update [L]
+
+RewriteRule ^TypMyjki/?$ ?controller=TypMyjki&action=getAll [L]
+RewriteRule ^TypMyjki/getAll/?$ index.php?controller=TypMyjki&action=getAll [L]
+RewriteRule ^TypMyjki/addform/?$ index.php?controller=TypMyjki&action=addform [L]
+RewriteRule ^TypMyjki/add/?$ index.php?controller=TypMyjki&action=add [L]
+RewriteRule ^TypMyjki/delete/(\d+)/?$ index.php?controller=TypMyjki&action=delete&id=$1 [L]
+RewriteRule ^TypMyjki/editform/(\d+)/?$ index.php?controller=TypMyjki&action=editform&id=$1 [L]
+RewriteRule ^TypMyjki/edit/(\d+)/?$ index.php?controller=TypMyjki&action=edit&id=$1 [L]
+RewriteRule ^TypMyjki/update/?$ index.php?controller=TypMyjki&action=update [L]
+
+RewriteRule ^access/logform/?$ index.php?controller=Access&action=logform [L]
+RewriteRule ^access/login/?$ index.php?controller=Access&action=login [L]
+RewriteRule ^access/logout/?$ index.php?controller=Access&action=logout [L]
+
+RewriteRule ^Uzytkownik/addform/?$ index.php?controller=Uzytkownik&action=addForm [L]
+RewriteRule ^Uzytkownik/add/?$ index.php?controller=Uzytkownik&action=add [L]
+
+#ErrorDocument 404 http://localhost/Lab_7/errors/404.html
